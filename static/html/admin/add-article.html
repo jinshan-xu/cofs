@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/add-article.css">
+
+    <script src="../../js/vue.js"></script>
+    <title>后台管理系统</title>
+</head>
+<body>
+<div id="admin" class="container">
+    <div class="row">
+        <!--左侧导航-->
+        <div class="left-col col-md-3">
+            <p class="title"><span>后台管理系统</span></p>
+            <div class="administrator d-flex">
+                <!--<img src="../" alt="image">-->
+                <div class="welcome">
+                    <h6>欢迎回来,</h6>
+                    <span>超级管理员</span>
+                </div>
+            </div>
+            <!--手风琴效果-->
+            <div id="management" class="card-display">
+                <!--数据管理-->
+                <div class="title">
+                    <h6>数据管理</h6>
+                </div>
+                <!--用户管理-->
+                <div class="card member-management">
+                    <a href="#member" data-toggle="collapse">
+                        <div class="card-header">
+                            <p class="dropdown-toggle">用户管理</p>
+                        </div>
+                    </a>
+                    <div class="collapse" id="member" data-parent="#management">
+                        <div class="member card-body">
+                            <a href="#">
+                                <div class="member-list" data-target="member_list">
+                                    <p>用户列表</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="member-add" data-target="add_member">
+                                    <p>添加用户</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--科研管理-->
+                <div class="card article-management">
+                    <a href="#article" data-toggle="collapse">
+                        <div class="card-header">
+                            <p class="dropdown-toggle">科研管理</p>
+                        </div>
+                    </a>
+                    <div class="collapse" id="article" data-parent="#management">
+                        <div class="card-body article">
+                            <a href="#">
+                                <div class="paper" data-type="journal_article" data-target="article-list">
+                                    <p>期刊文章列表</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                              <div class="paper" data-type="journal_article" data-target="add-article">
+                                <p>新增期刊文章</p>
+                              </div>
+                            </a>
+                            <a href="#">
+                                <div class="con-paper" data-type="conf_article" data-target="article-list">
+                                    <p>会议文章列表</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                              <div class="con-paper" data-type="conf_article" data-target="add-article">
+                                <p>新增会议文章</p>
+                              </div>
+                            </a>
+                            <a href="#">
+                                <div class="patent" data-type="patent" data-target="article-list">
+                                    <p>发明专利列表</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                              <div class="patent" data-type="patent" data-target="add-article">
+                                <p>新增发明专利</p>
+                              </div>
+                            </a>
+                            <a href="#">
+                              <div class="fundings" data-target="fundings">
+                                <p>基金项目列表</p>
+                              </div>
+                            </a>
+                            <a href="#">
+                              <div class="fundings" data-target="add_fundings">
+                                <p>新增基金项目</p>
+                              </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--内容管理-->
+                <div class="content-management">
+                    <h6>内容管理</h6>
+                    <!--首页推荐-->
+                    <div class="carousel-management card">
+                        <a href="#content" data-toggle="collapse">
+                            <div class="card-header">
+                                <p class="dropdown-toggle">主页内容</p>
+                            </div>
+                        </a>
+                        <div class="collapse" id="content" data-parent="#management">
+                            <div class="card-body content">
+                                <a href="#">
+                                    <div class="rec-article">
+                                        <p>推荐文章</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="rec-article">
+                                        <p>推荐新闻</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="rec-article">
+                                        <p>轮播图</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rec-article"></div>
+                    <div class="rec-article"></div>
+                </div>
+            </div>
+        </div>
+        <!--右侧主体-->
+        <div class="right-main-page col-md-9">
+          <!--人员列表-->
+          <div id="member_list" class="my-show" data-show="member-list">
+            <div class="title">
+            </div>
+            <div class="list">
+              <table>
+                <thead>
+                  <tr>
+                    <th>序号</th>
+                    <th>姓名</th>
+                    <th>ID</th>
+                    <th>邮箱</th>
+                    <th>职称</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(member, i) in res">
+                    <td v-html="(i+1)"></td>
+                    <td v-html="member['real_name_cn']"></td>
+                    <td v-html="member.mid"></td>
+                    <td v-html="member.email"></td>
+                    <td v-html="getPos(member['now_type'])"></td>
+                    <td><a href="javascript:void(0)" @click="alter(member.mid)">修改</a>/<a href="javascript:void(0)" name="del" @click="del(member.mid)">删除</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!--修改人员信息-->
+          <div id="member_alter" class="my-hide" data-show="member_alter">
+            <div class="title">
+              <ul>
+                <li>此栏目为修改相关人员信息.</li>
+                <li>请按照说明修改相应字段信息.</li>
+                <li>人员信息较为重要,请核对后再提交~!</li>
+              </ul>
+            </div>
+            <div class="form">
+              <table>
+                <tr>
+                  <td>姓名: </td>
+                  <td><input type="text" v-model="member['real_name_cn']"></td>
+                </tr>
+                <tr>
+                  <td>实验室ID: </td>
+                  <td><input type="text" v-model="member.mid"></td>
+                </tr>
+                <tr>
+                  <td>拼音姓名: </td>
+                  <td><input type="text" v-model="member['real_name_eng']"></td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>"拼音姓名" 一项</li>
+                      <li>请以 <strong>"名 姓"</strong> 的拼音形式填入. </li>
+                      <li>请注意, 名和姓中间有 <strong>空格</strong> 作为连接.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>性别: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member.gender" id="radioGender1"><label for="radioGender1">男</label>
+                    <input type="radio" value="0" v-model="member.gender" id="radioGender0"><label for="radioGender0">女</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>联系方式: </td>
+                  <td><input type="text" v-model="member.tel"></td>
+                </tr>
+                <tr>
+                  <td>邮箱: </td>
+                  <td><input type="text" v-model="member.email"></td>
+                </tr>
+                <tr>
+                  <td>职位: </td>
+                  <td><input type="text" v-model="member['pos_desc']"></td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>"职位" 一项</li>
+                      <li>此项目表示人员职称, 如 "教授" / "副教授" 等. <strong>只有老师才会添加</strong>.</li>
+                      <li>其他同学请填入 " <strong>#</strong> " !</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>工作职位: </td>
+                  <td><input type="text" v-model="member['job_desc']"></td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>填写毕业/出站人员工作单位信息</li>
+                      <li>只有毕业/出站的人员才需要填写此项,不属于此类型者填写 " <strong>#</strong> " 即可.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>之前实验室职别: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member['pre_type']" id="radioPreType1"><label for="radioPreType1">教师</label>
+                    <input type="radio" value="2" v-model="member['pre_type']" id="radioPreType2"><label for="radioPreType2">博后</label>
+                    <input type="radio" value="3" v-model="member['pre_type']" id="radioPreType3"><label for="radioPreType3">博士</label>
+                    <input type="radio" value="4" v-model="member['pre_type']" id="radioPreType4"><label for="radioPreType4">研究生</label>
+                    <input type="radio" value="8" v-model="member['pre_type']" id="radioPreType8"><label for="radioPreType8">合作交流</label>
+                  </td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>" 之前实验室职别 " 与 " 现在实验室职别 " 表示一学生或者博后在实验室工作职位的转变. </li>
+                      <li>例如: 何俊老师之前是博后,随后入职老师; 唐剑之前是博士,随后入职博后. 付彩玲,李正勇等都是如此.</li>
+                      <li>另外, 直博学生前后职别均是博士! 例如杨凯明,徐锡镇等. 但是之前是硕士,正常毕业之后读博则分别选择硕士与博士.</li>
+                      <li>已经毕业学生, 之后职别选择毕业硕士,毕业博士等. 如尹国路, 钟晓勇, 邓蜜等等.</li>
+                      <li>前后职别没有变化者, 二者相同. 如各硕士学生.</li>
+                      <li>如果对于某学生的这两项如何选择无法确定,请参考其他经历相同的学生这两项的选择.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>现今实验室职别: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member['now_type']" id="radioNowType1"><label for="radioNowType1">教师</label>
+                    <input type="radio" value="2" v-model="member['now_type']" id="radioNowType2"><label for="radioNowType2">博后</label>
+                    <input type="radio" value="3" v-model="member['now_type']" id="radioNowType3"><label for="radioNowType3">博士</label>
+                    <input type="radio" value="4" v-model="member['now_type']" id="radioNowType4"><label for="radioNowType4">研究生</label>
+                    <input type="radio" value="5" v-model="member['now_type']" id="radioNowType5"><label for="radioNowType5">出站博后</label>
+                    <input type="radio" value="6" v-model="member['now_type']" id="radioNowType6"><label for="radioNowType6">毕业博士</label>
+                    <input type="radio" value="7" v-model="member['now_type']" id="radioNowType7"><label for="radioNowType7">毕业硕士</label>
+                    <input type="radio" value="8" v-model="member['now_type']" id="radioNowType8"><label for="radioNowType8">合作交流</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>籍贯: </td>
+                  <td><input type="text" v-model="member['nav_place']"></td>
+                </tr>
+                <tr>
+                  <td>联系地址: </td>
+                  <td><input type="text" v-model="member.addr"></td>
+                </tr>
+                <tr>
+                  <td>是否仍在实验室工作: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member.isInLab" id="radio-1"><label for="radio-1">是</label>
+                    <input type="radio" value="0" v-model="member.isInLab" id="radio-2"><label for="radio-2">否</label>
+                  </td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>"是否仍在实验室工作" 一项</li>
+                      <li>选择 " 是 " 表示此学生现在还在实验室工作学习.</li>
+                      <li>选择 " 否 " 表示已经 离职 / 出站 / 毕业 / 肄业 等.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>是否展示在网站中: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member.isExh" id="radio-3"><label for="radio-3">是</label>
+                    <input type="radio" value="0" v-model="member.isExh" id="radio-4"><label for="radio-4">否</label>
+                  </td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>"是否展示在网站" 一项</li>
+                      <li>选择 " 是 " 表示将此人展示在网站的团队成员中.</li>
+                      <li>选择 " 否 " 表示将此人从网站的团队成员中隐藏.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <input type="button" @click="submitAlter()" value="提交修改">
+                  </td>
+                </tr>
+      
+              </table>
+            </div>
+          </div>
+          <!--新增用户-->
+          <div id="add_member" class="my-hide" data-show="add_member">
+            <div class="title">
+              <ul>
+                <li>请按照以下要求新增成员信息：</li>
+                <li>带有 " * " 号的为必填项目！</li>
+                <li>请按照输入框后要求添加信息！</li>
+              </ul>
+            </div>
+            <div class="form">
+              <table>
+                <tr>
+                  <td>姓名: </td>
+                  <td><input type="text" v-model="member['real_name_cn']"></td>
+                </tr>
+                <tr>
+                  <td>实验室ID: </td>
+                  <td><input type="text" v-model="member.mid"></td>
+                </tr>
+                <tr>
+                  <td>拼音姓名: </td>
+                  <td><input type="text" v-model="member['real_name_eng']"></td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>"拼音姓名" 一项</li>
+                      <li>请以 <strong>"名 姓"</strong> 的拼音形式填入. </li>
+                      <li>请注意, 名和姓中间有 <strong>空格</strong> 作为连接.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>性别: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member.gender" id="radioGender1"><label for="radioGender1">男</label>
+                    <input type="radio" value="0" v-model="member.gender" id="radioGender0"><label for="radioGender0">女</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>联系方式: </td>
+                  <td><input type="text" v-model="member.tel"></td>
+                </tr>
+                <tr>
+                  <td>邮箱: </td>
+                  <td><input type="text" v-model="member.email"></td>
+                </tr>
+                <tr>
+                  <td>职位: </td>
+                  <td><input type="text" v-model="member['pos_desc']"></td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>"职位" 一项</li>
+                      <li>此项目表示人员职称, 如 "教授" / "副教授" 等. <strong>只有老师才会添加</strong>.</li>
+                      <li>其他同学请填入 " <strong>#</strong> " !</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>工作职位: </td>
+                  <td><input type="text" v-model="member['job_desc']"></td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>填写毕业/出站人员工作单位信息</li>
+                      <li>只有毕业/出站的人员才需要填写此项,不属于此类型者填写 " <strong>#</strong> " 即可.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>之前实验室职别: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member['pre_type']" id="radioPreType1"><label for="radioPreType1">教师</label>
+                    <input type="radio" value="2" v-model="member['pre_type']" id="radioPreType2"><label for="radioPreType2">博后</label>
+                    <input type="radio" value="3" v-model="member['pre_type']" id="radioPreType3"><label for="radioPreType3">博士</label>
+                    <input type="radio" value="4" v-model="member['pre_type']" id="radioPreType4"><label for="radioPreType4">研究生</label>
+                    <input type="radio" value="8" v-model="member['pre_type']" id="radioPreType8"><label for="radioPreType8">合作交流</label>
+                  </td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>" 之前实验室职别 " 与 " 现在实验室职别 " 表示一学生或者博后在实验室工作职位的转变. </li>
+                      <li>例如: 何俊老师之前是博后,随后入职老师; 唐剑之前是博士,随后入职博后. 付彩玲,李正勇等都是如此.</li>
+                      <li>另外, 直博学生前后职别均是博士! 例如杨凯明,徐锡镇等. 但是之前是硕士,正常毕业之后读博则分别选择硕士与博士.</li>
+                      <li>已经毕业学生, 之后职别选择毕业硕士,毕业博士等. 如尹国路, 钟晓勇, 邓蜜等等.</li>
+                      <li>前后职别没有变化者, 二者相同. 如各硕士学生.</li>
+                      <li>如果对于某学生的这两项如何选择无法确定,请参考其他经历相同的学生这两项的选择.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>现今实验室职别: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member['now_type']" id="radioNowType1"><label for="radioNowType1">教师</label>
+                    <input type="radio" value="2" v-model="member['now_type']" id="radioNowType2"><label for="radioNowType2">博后</label>
+                    <input type="radio" value="3" v-model="member['now_type']" id="radioNowType3"><label for="radioNowType3">博士</label>
+                    <input type="radio" value="4" v-model="member['now_type']" id="radioNowType4"><label for="radioNowType4">研究生</label>
+                    <input type="radio" value="5" v-model="member['now_type']" id="radioNowType5"><label for="radioNowType5">出站博后</label>
+                    <input type="radio" value="6" v-model="member['now_type']" id="radioNowType6"><label for="radioNowType6">毕业博士</label>
+                    <input type="radio" value="7" v-model="member['now_type']" id="radioNowType7"><label for="radioNowType7">毕业硕士</label>
+                    <input type="radio" value="8" v-model="member['now_type']" id="radioNowType8"><label for="radioNowType8">合作交流</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>籍贯: </td>
+                  <td><input type="text" v-model="member['nav_place']"></td>
+                </tr>
+                <tr>
+                  <td>联系地址: </td>
+                  <td><input type="text" v-model="member.addr"></td>
+                </tr>
+                <tr>
+                  <td>是否仍在实验室工作: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member.isInLab" id="radio-1"><label for="radio-1">是</label>
+                    <input type="radio" value="0" v-model="member.isInLab" id="radio-2"><label for="radio-2">否</label>
+                  </td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>"是否仍在实验室工作" 一项</li>
+                      <li>选择 " 是 " 表示此学生现在还在实验室工作学习.</li>
+                      <li>选择 " 否 " 表示已经 离职 / 出站 / 毕业 / 肄业 等.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>是否展示在网站中: </td>
+                  <td>
+                    <input type="radio" value="1" v-model="member.isExh" id="radio-3"><label for="radio-3">是</label>
+                    <input type="radio" value="0" v-model="member.isExh" id="radio-4"><label for="radio-4">否</label>
+                  </td>
+                </tr>
+                <tr class="forAlert">
+                  <td>说明: </td>
+                  <td>
+                    <ul>
+                      <li>"是否展示在网站" 一项</li>
+                      <li>选择 " 是 " 表示将此人展示在网站的团队成员中.</li>
+                      <li>选择 " 否 " 表示将此人从网站的团队成员中隐藏.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>
+                    <input type="button" @click="addMember()" value="提  交">
+                  </td>
+                </tr>
+
+              </table>
+            </div>
+          </div>
+
+          <!--期刊文章 / 会议论文 / 专利 列表-->
+          <div id="article-list" class="my-hide" data-show="article-list">
+            <div class="title">
+              <ul>
+                <li>如果文章/专利信息有错误的,不提供修改.只提供删除.之后请自行重新添加文章信息.</li>
+              </ul>
+            </div>
+            <div class="list">
+              <table>
+                <tr>
+                  <td class="title">序号</td>
+                  <td class="title">文章/作者</td>
+                  <td class="title">发表时间</td>
+                </tr>
+                <tr v-for="(item, index) in articleList" :key="index">
+                  <td v-text="index+1"></td>
+                  <td>
+                    <p v-html="item['all_author']"></p>
+                    <p v-html="item.title"></p>
+                  </td>
+                  <td>
+                    <a href="javascript:;" @click="delArticle()">删除</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!--新增 文章 / 会议论文 / 专利 表 -->
+          <div id="add-article" class="my-hide" data-show="add_journal_article" >
+              <!--上部提醒-->
+              <div class="title">
+                <ul>
+                  <li>请按照以下要求新增 -<span>{{articleType}}</span>- 信息：</li>
+                  <li>添加信息之前,请阅读对应输入框下方说明.</li>
+                  <li>按照说明要求添加信息,否则可能会引起一些无法预料的错误~!</li>
+                </ul>
+              </div>
+
+              <!--使用 table 提交信息-->
+              <div class="add-table">
+                <table>
+                  <tr>
+                    <td>文章/专利名:</td>
+                    <td>
+                      <textarea v-model="title" placeholder="请输入文章/专利名,注意阅读下方说明." cols="40" rows="3"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 请输入完整文章名或者专利名称,不需要添加额外的标点符号.</li>
+                        <li>2. 若是英文文章,至少第一个单词的 <mark>首字母需要大写.</mark></li>
+                        <li>3. 英文示例: <strong>Femtosecond laser microprinting of a polymer fiber Bragg grating for high-sensitivity temperature measurements</strong></li>
+                        <li>4. 中文示例: <strong>一种血细胞浓度传感器及测试装置</strong></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>请选择人员姓名:</td>
+                    <td>
+                      <div class="member-list">
+                        <ul>
+                          <li v-for="(item,i) in nameCnList" :key="i"><span v-html="item">示例</span><span @click="addMember($event,i)">Add</span></li>
+                        </ul>
+                        <div class="add-other-person">
+                          <input type="text" placeholder="请手动输入人员姓名,如: Sanfeng Zhang" v-model="otherMember"><span @click="addOtherMember()">添加</span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 在人员姓名列表中按文章作者序列依次选择作者姓名.</li>
+                        <li>2. 若是文章作者未出现在列表中,请在最下方文本输入框中输入作者姓名.</li>
+                        <li>3. <strong>注意:</strong> 自行输入作者姓名为拼音姓名时,请按照 <mark>名在前,姓在后,中间以空格分隔</mark>的方式填写!!</li>
+                        <li>4. 填写 "张三丰" 示例: <mark>Sanfeng Zhang</mark></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>已选人员列表:</td>
+                    <td>
+                      <div class="selected-member">
+                        <ul>
+                          <li v-for="(item,i) in allAuthorCnList" :key="i"><span v-html="item">示例</span><span v-html="i+1">1</span><span @click="delMember(i)">del</span></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 单击 "del" 可删除已选作者名.</li>
+                        <li>2. 人员后面数组表示此作者在作者列表中的次序.</li>
+                        <li>3. 未验证是否重复选取作者名,请注意是否添加了重复作者.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>选择作者完成</td>
+                    <td>
+                      <input type="button" value="选择完成" @click="finish()">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 定点选择完成后将自动在下面框中生成所选作者姓名和实验室ID</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>已添加人员实验室ID:</td>
+                    <td>
+                      <textarea placeholder="此处显示已选人员实验室编号,注意阅读下方说明." v-model="all_author_mid" cols="40" rows="3"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 此文本框将自动列出所有作者的实验室ID,以 "#" 连接</li>
+                        <li>2. 没有实验室ID的作者,将以 空格 代替ID值.</li>
+                        <li>3. 如所列作者列表没有错误,最好不要修改框内内容.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>姓名列表:</td>
+                    <td>
+                      <textarea placeholder="此处显示已选人员姓名列表,注意阅读下方说明." v-model="all_author" cols="40" rows="3"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 此文本框将自动列出所有作者拼音名列表,以 "," (逗号)连接.</li>
+                        <li>2. 若是文章/专利的作者名是中文,请点击下方按钮以选择使用中文姓名还是拼音姓名!</li>
+                        <li>3. <strong>注意:</strong> <mark>若是想要为 一作/共同作者/通信作者 添加特殊标识符,</mark>可以在对应姓名后面直接添加.注意不要添加其他信息!</li>
+                        <li>4. 为 共同一作作者/通讯作者 添加特殊标识示例: Jiangtao Zhou<mark>†</mark>, Kuikui Guo<mark>†</mark>, Jun He<mark>*</mark>, ...</li>
+                        <li>5. 若所列作者名没有错误,最好不要修改框内内容.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>是否使用中文:</td>
+                    <td>
+                      <span @click="useNameCn()" class="isUseEn">使用中文姓名</span><span @click="useNameEng()">使用拼音姓名</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 点击"使用中文姓名",作者姓名列表以中文显示.</li>
+                        <li>2. 点击"使用拼音姓名",作者姓名列表以拼音显示.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>其余文章信息:</td>
+                    <td>
+                      <textarea placeholder="请输入其余文章信息,注意阅读下方说明." v-model="detail" cols="40" rows="3"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 上方输入框中填写 文章/专利 的其余信息.</li>
+                        <li>2. 示例: <mark>Lab on a Chip 18(4), 595-600, 2018. (JCR一区,IF=6.045)</mark></li>
+                        <li>3. 示例: <mark>2017年中国光纤传感学术会议暨产业化论坛, 北京, Oct. 14-16, 2017. (特邀报告)</mark></li>
+                        <li>4. 示例: <mark>中国发明专利, 深圳大学, ZL201510376577.7, 申请日：2015.06.30, 授权日：2016.09.21</mark></li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>文章/专利年份</td>
+                    <td>
+                      <input type="text" placeholder="请输入四位数年份.如: 2018" v-model="pub_year">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 仅需要输入四位数年份数字即可,不需要输入"年"等附加信息.</li>
+                        <li>2. 示例: 2018</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>文章/专利类型:</td>
+                    <td>
+                      <input type="text" placeholder="请输入文章/专利类型.参考下方说明~!" v-model="type">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 所添加是期刊文章,请输入例如 " <mark>JCR二区</mark> " 等文章分区信息.</li>
+                        <li>2. 所添加是会议文章,请输入例如 " <mark>口头报告</mark> "等会议文章类型信息.</li>
+                        <li>3. 所添加是发明专利,请输入例如 " <mark>中国发明专利</mark> "等专利信息.</li>
+                        <li>4. 若是不确定文章/专利类型,可参考实验室网站中现有文章/专利类型填写.</li>
+                        <li>5. 若是文章/专利没有具体类型请填入" <mark>#</mark> ".</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>是否展示在网页:</td>
+                    <td>
+                      <input type="radio" value="1" id="isExh-1" v-model="isExh"><label for="isExh-1">展示在网页中</label>&nbsp;&nbsp;<input type="radio" value="0" id="isExh-0" v-model="isExh"><label for="isExh-0">不展示在网页中</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>说明:</td>
+                    <td>
+                      <ul>
+                        <li>1. 选择展示在网页将会将此文章/专利显示在网页中.</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>提交信息:</td>
+                    <td>
+                      <input type="button" value="确认提交" @click="submitArticleInfo()">
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+          <!--基金列表-->
+          <div id="fundings" class="my-hide" data-show="fundings">
+
+          </div>
+          <!--新增基金-->
+          <div id="add_fundings" class="my-hide" data-show="add_fundings"></div>
+    </div>
+    </div>
+</div>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/popper.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/admin.js"></script>
+<script>
+    document.onkeydown = function(e)
+    {
+        if(!e)
+        {
+            e = window.event;
+        }
+        if((e.keyCode || e.which) == 13)
+        {
+            addArticle();
+        }
+    }
+</script>
+</body>
+</html>

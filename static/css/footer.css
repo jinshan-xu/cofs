@@ -1,0 +1,94 @@
+#footer.container-fluid {
+  background: #cd0d2c url("../../images/index/footer-bg.jpg") repeat center center;
+  border-top: 0.3rem solid #c3732f;
+  padding: 2rem 0; }
+
+#footer.container-fluid a {
+  color: #c8c9ca; }
+
+#footer.container-fluid a:hover {
+  color: #cdcecf;
+  text-decoration: none; }
+
+#footer.container-fluid a:hover .toTop {
+  background-color: RGBA(0, 0, 0, 0.8); }
+
+#footer.container-fluid a .toTop {
+  position: fixed;
+  bottom: 10px;
+  right: 30px;
+  width: 48px;
+  padding: .2rem .5rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: RGBA(0, 0, 0, 0.5); }
+
+#footer.container-fluid a .toTop a:hover {
+  text-decoration: none;
+  color: #fff; }
+
+#footer.container-fluid a .toTop img {
+  width: 2rem; }
+
+#footer.container-fluid .container {
+  padding: 0; }
+
+#footer.container-fluid .d-flex {
+  justify-content: space-between; }
+
+#footer.container-fluid .ofsc-logo, #footer.container-fluid .ofsc-info, #footer.container-fluid .szu-logo {
+  padding: 0;
+  align-self: center; }
+
+#footer.container-fluid .ofsc-logo {
+  text-align: left; }
+
+#footer.container-fluid .ofsc-logo img {
+  width: 100px; }
+
+#footer.container-fluid .ofsc, #footer.container-fluid .szu-logo {
+  margin: 1.2rem 0;
+  padding: 0; }
+
+#footer.container-fluid .ofsc-info {
+  color: #fff;
+  position: relative;
+  left: -2rem; }
+
+#footer.container-fluid .ofsc-info p {
+  padding: .3rem 0 .3rem .1rem;
+  margin: 0;
+  font-size: .8rem; }
+
+#footer.container-fluid .ofsc-info img {
+  width: 1.2rem;
+  height: auto;
+  vertical-align: bottom; }
+
+#footer.container-fluid .szu-logo {
+  text-align: right; }
+
+#footer.container-fluid .szu-logo img {
+  max-width: 15rem; }
+
+#footer.container-fluid .copy-right {
+  color: #d4d5d6;
+  text-align: center;
+  font-size: .8rem;
+  margin: 2rem 0 .5rem; }
+
+@media (max-width: 576px) {
+  #footer.container-fluid {
+    padding: 1rem 0; }
+  #footer.container-fluid .ofsc-logo {
+    text-align: right; }
+  #footer.container-fluid .ofsc-logo img {
+    max-width: 18rem; }
+  #footer.container-fluid .ofsc-info {
+    margin-left: 2.5rem; }
+  #footer.container-fluid .szu-logo {
+    display: none; }
+  #footer.container-fluid .copy-right {
+    margin: 1rem 0 .5rem; } }
+
+/*# sourceMappingURL=footer.css.map */

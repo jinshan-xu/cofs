@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/index/favicon.png">
+    <link rel="stylesheet" href="../../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../../css/achievement-list.css">
+    <title></title>
+</head>
+<body>
+    <!-- 导航头 -->
+    <header class="container-fluid">
+    </header>
+
+    <!--主体-->
+    <section id="achievement" class="container">
+        <!--导航条-->
+        <ul class='nav nav-tabs'>
+            <li class='nav-item'>
+                <a href='#journal_article' title="journal_article" class='nav-link active' data-toggle='tab'>期刊论文</a>
+            </li>
+            <li class='nav-item'>
+                <a href='#conf_article' title="conf_article" class='nav-link' data-toggle='tab'>会议论文</a>
+            </li>
+            <li class='nav-item'>
+                <a href='#patent' title="patent" class='nav-link' data-toggle='tab' >发明专利</a>
+            </li>
+            <li class='nav-item'>
+                <a href='#award' title="award" class='nav-link' data-toggle='tab'>科研奖励</a>
+            </li>
+        </ul>
+
+        <!--搜索框-->
+        <div class="search-box clearfix">
+            <div class="search clearfix">
+              <div class="search-input">
+                <input type="text" name="search-box" placeholder="请输入查询关键字"><input type="button" name="submit-query" value="查 询">
+              </div>
+              <div class="search-help hide">
+                <div>
+                <p>请参考如下关键字搜索技巧:</p>
+                <ul>
+                  <li>可搜索<span>姓名 / 年份 / 文章标题某字段</span>等;</li>
+                  <li>多个关键词之间以<span>空格</span>分隔;</li>
+                  <li>若关键词包含多个单词请以<span>下划线 "_"</span>连接,以标识为一个搜索关键字;</li>
+                  <li>示例:<span>" zhangsan 2018 optics_letters "</span>.表示搜索<span>"zhangsan", "2018", "optics letters"</span>三个关键词.</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--内容显示-->
+        <div class="content tab-content">
+            <!--显示内容信息-->
+            <div class="statement">
+                <p class="info">
+                    信息返回1
+                </p>
+            </div>
+            <!--显示记录条数-->
+            <div class="number">
+                <span>每页显示</span>
+                <select name='pageNum'>
+                    <option value='10'>10</option>
+                    <option value='15'>15</option>
+                    <option value='25'>25</option>
+                    <option value='50'>50</option>
+                </select>
+                <span>条记录</span>
+            </div>
+            <!--文章列表-->
+            <div class="jour-article tab-pane active" id="journal_article">
+                <!--<table>-->
+                    <!--<tr>-->
+                        <!--<td class="title">序号</td>-->
+                        <!--<td class="title">文章/作者</td>-->
+                        <!--<td class="title">发表时间</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1</td>-->
+                        <!--<td>-->
+                            <!--<p><a href="#">Chupao Lin</a>, Changrui Liao*, Yunfang Zhang, Lei Xu, Ying Wang, Cailing Fu, Kaiming Yang, Jia Wang, Jun He and Yiping Wang*</p>-->
+                            <!--<p><a href="#"> “Optofluidic gutter oil discrimination based on hybrid-waveguide coupler in fibre”</a></p>-->
+                            <!--<p>Lab on a Chip 18(4), 595-600, 2018. (JCR一区，IF=6.045)</p>-->
+                        <!--</td>-->
+                        <!--<td>2018</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                    <!--<td>2</td>-->
+                    <!--<td>-->
+
+                    <!--</td>-->
+                    <!--<td>2018</td>-->
+                <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>3</td>-->
+                        <!--<td>-->
+
+                        <!--</td>-->
+                        <!--<td>2018</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+            </div>
+            <!--会议文章-->
+            <div class="conf-article tab-pane" id="conf_article">
+                <!--<table>-->
+                    <!--<tr>-->
+                        <!--<td class="title">序号</td>-->
+                        <!--<td class="title">文章/作者</td>-->
+                        <!--<td class="title">发表时间</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1</td>-->
+                        <!--<td>-->
+
+                        <!--</td>-->
+                        <!--<td>2018</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>2</td>-->
+                        <!--<td>-->
+
+                        <!--</td>-->
+                        <!--<td>2018</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>3</td>-->
+                        <!--<td>-->
+
+                        <!--</td>-->
+                        <!--<td>2018</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+            </div>
+            <!--专利-->
+            <div class="patent tab-pane" id="patent">
+                <!--<table>-->
+                    <!--<tr>-->
+                        <!--<td class="title">序号</td>-->
+                        <!--<td class="title">文章/作者</td>-->
+                        <!--<td class="title">发表时间</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>1</td>-->
+                        <!--<td>-->
+
+                        <!--</td>-->
+                        <!--<td>2018</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>2</td>-->
+                        <!--<td>-->
+
+                        <!--</td>-->
+                        <!--<td>2018</td>-->
+                    <!--</tr>-->
+                    <!--<tr>-->
+                        <!--<td>3</td>-->
+                        <!--<td>-->
+
+                        <!--</td>-->
+                        <!--<td>2018</td>-->
+                    <!--</tr>-->
+                <!--</table>-->
+            </div>
+            <!--科研奖励-->
+            <div class="award tab-pane" id="award">
+              <div class="title">科研奖励</div>
+              <div class="content">
+                <div class="head">
+                  <p>团队教师获深圳市自然科学奖一等奖、深圳市五一劳动奖章和第十五届国际光通信与网络会议（ICOCN 2016）青年科学家奖等科研奖励。</p>
+                </div>
+                <div class="award-1">
+                  <p class="title">深圳市自然科学奖一等奖<span>（2017年度）</span></p>
+                  <p class="details"><span>项目名称: </span>光纤微结构器件的制备方法及传感机理研究</p>
+                  <p class="details"><span>项目完成人: </span>王义平、廖常锐、何俊、王东宁、靳伟</p>
+                  <p class="details"><span>项目完成单位: </span>深圳大学、香港理工大学</p>
+                  <p class="details"><span>项目简介: </span>本项目研究了光纤微结构器件的制备方法及传感机理，研究内容包括：（1）长周期光纤光栅的CO2激光制备方法及传感机理；（2）光纤布拉格光栅的超快激光制备方法及传感机理；（3）光纤微结构干涉仪的制备方法及传感机理。研究成果达到国际领先水平，成功制备世界上第一支空气芯光子带隙光纤光栅，领先国外同行三年；突破了无光敏性光纤上制备光纤布拉格光栅的难题，成功制备世界上第一支微纳光纤布拉格光栅；揭示了光纤微腔干涉仪的导模与被测量之间的高效耦合机理。项目负责人王义平是深圳大学特聘教授、国家杰青、国家万人计划科技创新领军人才。项目完成人主持国家自然科学基金重点项目等国家级项目14项和国际合作项目6项；第一作者或通信作者发表SCI论文55篇，SCI他引1162次，单篇最高SCI他引193次；授权专利13项。本项目增强了我国在国际光电子学领域特别是光纤传感领域的领先地位，促进了深圳市物联网光纤传感产业的快速健康发展。</p>
+                </div>
+                <div class="award-2"><p class="title">深圳市五一劳动奖章<span>（王义平）</span></p></div>
+                <div class="award-3"><p class="title">第十五届国际光通信与网络会议（ICOCN 2016）青年科学家奖<span>（廖常锐）</span></p></div>
+                <div class="award-photo">
+                  <img src="../../images/achievement/img-01.png" alt="">
+                  <img src="../../images/achievement/img-02.png" alt="">
+                </div>
+              </div>
+            </div>
+        </div>
+        <!--分页查询-->
+        <div class="page-list clearfix">
+            <!--页码格子-->
+            <div class="right clearfix">
+                <ul class="list-unstyled" id='pageNav'>
+                    <li>首页</li>
+                    <li>&lt;&lt;</li>
+                    <li class="actived">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>...</li>
+                    <li>4</li>
+                    <li>&gt;&gt;</li>
+                    <li><input type="text" name="searchPageNum"></li>
+                    <li>GO</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--尾部-->
+    <footer class="container-fluid">
+    </footer>
+
+
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/popper.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
+<script src="../../js/addHeaderAndFooter.js"></script>
+<!--<script src="../../js/common.js"></script>-->
+<script src="../../js/achievement-1.js"></script>
+<script src="../../js/research-dir-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>ofsc 后台管理系统首页</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <!--左侧导航-->
+            <div class="left-col col-12 col-md-3">
+                <p class="title"><span>后台管理系统</span></p>
+                <div class="administrator d-flex">
+                    <img src="./" alt="image">
+                    <div class="welcome">
+                        <h6>欢迎回来,</h6>
+                        <span>超级管理员</span>
+                    </div>
+                </div>
+                <!--手风琴效果-->
+                <div id="management" class="card-display">
+                    <!--数据管理-->
+                    <div class="title">
+                        <h6>数据管理</h6>
+                    </div>
+                    <!--用户管理-->
+                    <div class="card member-management">
+                        <a href="#member" data-toggle="collapse">
+                            <div class="card-header">
+                                <p class="dropdown-toggle">用户管理</p>
+                            </div>
+                        </a>
+                        <div class="collapse" id="member" data-parent="#management">
+                            <div class="member card-body">
+                                <a href="#">
+                                    <div class="member-list">
+                                        <p>用户列表</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="member-add">
+                                        <p>添加用户</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        </div>
+                    <!--科研管理-->
+                    <div class="card article-management">
+                        <a href="#article" data-toggle="collapse">
+                            <div class="card-header">
+                                <p class="dropdown-toggle">科研管理</p>
+                            </div>
+                        </a>
+                        <div class="collapse" id="article" data-parent="#management">
+                            <div class="card-body article">
+                                <a href="#">
+                                    <div class="paper">
+                                        <p>期刊文章</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="con-paper">
+                                        <p>会议文章</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="patent">
+                                        <p>专利申请</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--内容管理-->
+                    <div class="content-management">
+                        <h6>内容管理</h6>
+                        <!--首页推荐-->
+                        <div class="carousel-management card">
+                            <a href="#content" data-toggle="collapse">
+                                <div class="card-header">
+                                    <p class="dropdown-toggle">主页内容</p>
+                                </div>
+                            </a>
+                            <div class="collapse" id="content" data-parent="#management">
+                                <div class="card-body content">
+                                    <a href="#">
+                                        <div class="rec-article">
+                                            <p>推荐文章</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="rec-article">
+                                            <p>推荐新闻</p>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="rec-article">
+                                            <p>轮播图</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="推荐文章"></div>
+                        <div class="新闻推荐"></div>
+                    </div>
+                </div>
+            </div>
+            <!--右侧主体显示-->
+            <div class="right-main-page">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

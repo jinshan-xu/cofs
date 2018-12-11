@@ -1,0 +1,71 @@
+.right-main-page {
+  padding: 0; }
+
+.right-main-page .title {
+  background-color: #bbc2c8;
+  padding: 2rem 1rem; }
+
+.right-main-page .title ul {
+  list-style-type: circle; }
+
+.right-main-page .title li {
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #96144d; }
+
+.right-main-page .title li:first-child {
+  font-size: 1.5rem;
+  font-weight: 800;
+  list-style-type: disc; }
+
+.right-main-page .form {
+  padding-bottom: 1rem;
+  background-color: #efefef; }
+
+.right-main-page table {
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0.1rem 1rem; }
+
+.right-main-page table tr:nth-child(2n+1) {
+  background-color: #eee; }
+
+.right-main-page table tr > td:first-child {
+  text-align: right; }
+
+.right-main-page table input[type="text"] {
+  width: 100%;
+  padding: 0.2rem; }
+
+.right-main-page table .button {
+  font-size: 0; }
+
+.right-main-page table input[type="button"] {
+  width: 50%;
+  line-height: 2rem;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  background-color: #7b0c3d;
+  color: #eee;
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+.right-main-page table input[type="button"]:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+.right-main-page table input[type="button"]:first-child:hover {
+  background-color: #950d43;
+  color: #fff; }
+
+.right-main-page table input[type="button"]:last-child {
+  background-color: #006a97;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
+.right-main-page table input[type="button"]:last-child:hover {
+  background-color: #0095cf;
+  color: #fff; }
+
+/*# sourceMappingURL=add-member.css.map */

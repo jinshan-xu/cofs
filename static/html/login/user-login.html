@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset='utf8'>
+ <meta name='author' content='XJS'>
+ <meta name='keyword' content='user-login'>
+ <title>Login-test</title>
+<!--  完成登陆时的空白输入提醒,登录成功/失败验证 -->
+ <script src='./common.js' type='text/javascript'></script>
+ <script src='./loginTest.js' type='text/javascript'></script>
+ <style>
+   span{
+     color:#aaa;
+	 font-size: 0.5em;
+   }
+   #loginInfo{
+     font-size:0.5em;
+	 color:#aaa;
+   }
+ </style>
+</head>
+<body>
+  <div id='d1'>
+  <p>
+    用户名称：<input type='text' name='uname' placeholder='请输入用户名称' onblur='loginTestBlur(this.name)' onfocus='loginFocus(this.name)' autofocus>    <!-- 怎么引入 autofocus? -->
+	<span id='nameSpan'><small>*用户名不能为空</small></span> <br>
+
+<!--     两个 input 同时设置 onblur / onfocus 可以分先后获取元素节点 -->
+
+	用户密码：<input type='password' name='upwd' placeholder='请输入用户密码' onblur='loginTestBlur(this.name)' onfocus='loginFocus(this.name)'> 
+	<span id='pwdSpan'><small>*用户密码不能为空</small></span><br>
+    <p id='loginInfo'></p>
+
+	<input type='button' value='登录' id='submit' onclick='loginCheck()'>
+  </p>
+  </div>
+
+<!-- 
+ <script src='./js/common.js'></script>
+ <script src='./js/loginTest.js'></script>
+ --> 
+   <script>
+   document.onkeydown = function(event)  // 为 登录 按钮添加键盘响应事件
+   {
+      if (event.keyCode == '13')
+      {
+		  loginCheck();
+      }
+   }
+ </script>
+</body>
+</html>

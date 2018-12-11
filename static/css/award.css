@@ -1,0 +1,49 @@
+#award.container {
+  padding: 1rem .2rem; }
+
+#award.container .title {
+  margin: 1rem .3rem 0rem;
+  font-size: 1.5rem;
+  color: #C10343;
+  font-weight: bold; }
+
+#award.container .summary .title {
+  color: #C10343; }
+
+#award.container ul {
+  list-style: square; }
+
+#award.container li {
+  padding: .2rem .3rem; }
+
+#award.container li:nth-child(2n) {
+  background-color: #e6ffff; }
+
+#award.container p {
+  margin-bottom: .5rem; }
+
+#award.container a {
+  color: #B40041; }
+
+#award.container .item {
+  padding: .5rem;
+  margin-top: .5rem;
+  border: 1px solid #C10343;
+  border-left: 4px solid #C10343; }
+
+#award.container .details .photo {
+  float: left;
+  padding: .8rem .5rem 0 0; }
+
+#award.container .info {
+  padding-top: 1rem; }
+
+#award.container .info .name {
+  font-size: 1.2rem; }
+
+.clear-float:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+/*# sourceMappingURL=award.css.map */

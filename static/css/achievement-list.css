@@ -1,0 +1,261 @@
+@charset "UTF-8";
+#achievement.container {
+  /*------------------------ 导航条 ---------------------------*/
+  padding-top: 1rem;
+  /*------------------------ 搜索框 ---------------------------*/
+  /*------------------------ 信息提示框 ---------------------------*/
+  /*------------------------ 信息提示框 ---------------------------*/
+  /*------------------------ 文章列表 ---------------------------*/
+  /*------------------------ 奖励页 ---------------------------*/
+  /*------------------------ 分页条 ---------------------------*/ }
+
+#achievement.container .nav-tabs {
+  border-bottom: 1px solid #C10343;
+  justify-content: center; }
+
+#achievement.container .nav-tabs .nav-link {
+  color: #C10343;
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+#achievement.container .nav-tabs .nav-link:hover {
+  border-color: #C10343 #C10343 #C10343;
+  color: #c3732f; }
+
+#achievement.container .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #C10343;
+  border-color: #C10343 #C10343 #C10343; }
+
+#achievement.container .hide {
+  display: none; }
+
+#achievement.container .search-box {
+  margin: 1rem 0; }
+
+#achievement.container .search-box .search {
+  float: right; }
+
+#achievement.container .search-box .search-input {
+  position: relative; }
+
+#achievement.container .search-box .search-input input[type="text"] {
+  width: 25rem;
+  height: 2.5rem;
+  border: 1px solid #C10343;
+  padding: .3rem .5rem;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+#achievement.container .search-box .search-input input[type="button"] {
+  background-color: #C10343;
+  border: none;
+  outline: none;
+  width: 3.2rem;
+  height: 2.5rem;
+  color: #eaebec;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  padding: .3rem .5rem;
+  box-sizing: border-box;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer; }
+
+#achievement.container .search-box .search-input input[type="button"]:hover {
+  color: #fff;
+  box-shadow: 2px 2px 8px #333; }
+
+#achievement.container .search-box .search-help {
+  padding: 1rem .8rem;
+  border: 1px solid red;
+  width: 25rem;
+  position: absolute;
+  color: #ddd;
+  margin-top: .5rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 10s linear; }
+
+#achievement.container .search-box .search-help p {
+  font-weight: bold;
+  margin-bottom: .5rem; }
+
+#achievement.container .search-box .search-help ul {
+  padding-left: 30px;
+  margin-bottom: 0; }
+
+#achievement.container .search-box .search-help li {
+  padding: .2rem 0; }
+
+#achievement.container .search-box .search-help span {
+  color: #ffe000;
+  padding: 0 .5rem; }
+
+#achievement.container .search-box .slide {
+  height: 0; }
+
+#achievement.container .content .statement {
+  background-color: #e5f6ff;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
+
+#achievement.container .content .statement p {
+  margin: .2rem 0;
+  padding-left: .5rem; }
+
+#achievement.container .content .statement span {
+  color: #C10343;
+  padding: 0 .5rem;
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+#achievement.container .content .number {
+  color: #9da7ad; }
+
+#achievement.container .content .jour-article table, #achievement.container .content .conf-article table, #achievement.container .content .patent table {
+  width: 100%; }
+
+#achievement.container .content .jour-article table tr, #achievement.container .content .conf-article table tr, #achievement.container .content .patent table tr {
+  border-bottom: 1px solid #0F68B3; }
+
+#achievement.container .content .jour-article table tr:nth-child(2n), #achievement.container .content .conf-article table tr:nth-child(2n), #achievement.container .content .patent table tr:nth-child(2n) {
+  background-color: #e5f6ff; }
+
+#achievement.container .content .jour-article table td.title, #achievement.container .content .conf-article table td.title, #achievement.container .content .patent table td.title {
+  text-align: center;
+  font-weight: 550;
+  font-size: 1.1rem; }
+
+#achievement.container .content .jour-article table td, #achievement.container .content .conf-article table td, #achievement.container .content .patent table td {
+  padding: .8rem 0 0.3rem; }
+
+#achievement.container .content .jour-article table td:first-child, #achievement.container .content .conf-article table td:first-child, #achievement.container .content .patent table td:first-child {
+  width: 3.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 550; }
+
+#achievement.container .content .jour-article table td:last-child, #achievement.container .content .conf-article table td:last-child, #achievement.container .content .patent table td:last-child {
+  width: 5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 550; }
+
+#achievement.container .content .jour-article table td p, #achievement.container .content .conf-article table td p, #achievement.container .content .patent table td p {
+  margin: .3rem 0 .1rem;
+  padding: 0 .5rem;
+  font-size: 1rem;
+  color: #1b1e21; }
+
+#achievement.container .content .jour-article table td p mark, #achievement.container .content .conf-article table td p mark, #achievement.container .content .patent table td p mark {
+  background-color: #ffcc00; }
+
+#achievement.container .content .jour-article table td p a, #achievement.container .content .conf-article table td p a, #achievement.container .content .patent table td p a {
+  color: #C10343; }
+
+#achievement.container .content .jour-article table td p a:hover, #achievement.container .content .conf-article table td p a:hover, #achievement.container .content .patent table td p a:hover {
+  color: #f00; }
+
+#achievement.container .content .jour-article table td p:first-child a, #achievement.container .content .conf-article table td p:first-child a, #achievement.container .content .patent table td p:first-child a {
+  color: #0F68B3; }
+
+#achievement.container .content .jour-article table td p:nth-child(2), #achievement.container .content .conf-article table td p:nth-child(2), #achievement.container .content .patent table td p:nth-child(2) {
+  font-size: 1.2rem; }
+
+#achievement.container .content .jour-article table td p:nth-child(2) a:hover, #achievement.container .content .conf-article table td p:nth-child(2) a:hover, #achievement.container .content .patent table td p:nth-child(2) a:hover {
+  text-decoration: none; }
+
+#achievement.container #award > .title {
+  font-size: 1.5rem;
+  color: #C10343;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0; }
+
+#achievement.container #award .content p.details {
+  text-indent: 1rem;
+  margin: .5rem 0; }
+
+#achievement.container #award .content p.details span {
+  font-weight: bold;
+  padding-right: .5rem; }
+
+#achievement.container #award .content p.title {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  margin-left: -5px;
+  border-left: 5px solid #C10343;
+  color: #C10343; }
+
+#achievement.container #award .content p.title span {
+  color: #0F68B3; }
+
+#achievement.container #award .content .award-photo {
+  text-align: center; }
+
+#achievement.container #award .content .award-photo img {
+  padding: .5rem;
+  max-width: 100%; }
+
+#achievement.container .page-list {
+  margin: .5rem 0;
+  padding: .5rem 0; }
+
+#achievement.container .page-list ul {
+  float: right; }
+
+#achievement.container .page-list li {
+  float: left;
+  width: 2rem;
+  height: 2.1rem;
+  text-align: center;
+  padding: .2rem 0 .3rem;
+  border: 1px solid #C10343;
+  border-left: none;
+  color: #C10343;
+  cursor: pointer; }
+
+#achievement.container .page-list li input {
+  display: inline-block;
+  width: 100%;
+  color: #C10343;
+  text-align: center;
+  border: none;
+  outline: none; }
+
+#achievement.container .page-list li:first-child {
+  border-left: 1px solid #C10343;
+  width: 3rem; }
+
+#achievement.container .page-list li:hover {
+  background-color: #fba600;
+  color: #f8f9fa; }
+
+#achievement.container .page-list li.actived {
+  background-color: #C10343;
+  color: #fff; }
+
+@media (max-width: 576px) {
+  #achievement.container {
+    padding: 1rem 5px; }
+  #achievement.container .nav-tabs .nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .5rem .3rem; }
+  #achievement.container .search {
+    width: 100%; }
+  #achievement.container .search-box .search-input {
+    width: 100%; }
+  #achievement.container .search-box .search-input input[type="text"] {
+    width: 100%; } }
+
+/*# sourceMappingURL=achievement-list.css.map */

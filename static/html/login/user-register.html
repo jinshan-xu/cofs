@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf8'>
+<meta name='author' content='XJS'>
+<title>user 模块</title>
+<style>
+  .alert {
+    color:#aaa;
+	font-size:0.6em;
+	padding:2px 3px;
+  }
+  input {
+    padding:5px 8px;
+	margin: 5px 0px;
+   }
+  input[type="submit"] {
+    width:100%;
+  }
+</style>
+</head>
+<body>
+
+ <form method='post' action='/user/login'>
+ <table>
+   <tr>
+     <td align='right'>用户名: </td>
+	 <td>
+	  <input type='text' name='uname' onblur='checkUname(this.value)'  placeholder='请输入用户名' autofocus>
+	 </td>
+	 <td>
+	  <span class='alert' id='unameSpan'>*用户名仅接受6-12位汉字/数字/字母/_/-</span>
+	 </td>
+   </tr>
+   <tr>
+     <td align='right'>密码: </td>
+	 <td>
+	   <input type='password' name='upwd' onblur='checkUpwd(this.value)' placeholder='请输入密码'>
+	 </td>
+	 <td>
+	   <span class='alert' id='upwdSpan'>*密码仅接受6-12位数字/字母/_/-</span>
+	 </td>
+   </tr>
+   <tr>
+     <td align='right'>确认密码: </td>
+	 <td>
+	   <input type='password' name='secUpwd' onblur='checkSecUpwd(this.value)' placeholder='请再次确认密码'>
+	 </td>
+	 <td>
+	   <span class='alert' id='secUpwdSpan'>*两次输入密码须相同</span>
+	 </td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>
+	   <input type='submit' value = '登录'>
+	 </td>
+	 <td></td>
+   </tr>
+ </table>
+ </form>
+
+ <script src='./common.js'></script>
+ <script src='./userRegisterCheck.js'></script>
+ <script></script>
+
+</body>
+</html>

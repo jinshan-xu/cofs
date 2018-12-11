@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css"/>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/add-article.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>add-patent 管理系统</title>
+</head>
+<body onload="queryAuthorList()">
+<div class="container-fluid">
+    <div class="row">
+        <!--左侧导航-->
+        <div class="left-col col-md-3">
+            <p class="title"><span>后台管理系统</span></p>
+            <div class="administrator d-flex">
+                <img src="./" alt="image">
+                <div class="welcome">
+                    <h6>欢迎回来,</h6>
+                    <span>超级管理员</span>
+                </div>
+            </div>
+            <!--手风琴效果-->
+            <div id="management" class="card-display">
+                <!--数据管理-->
+                <div class="title">
+                    <h6>数据管理</h6>
+                </div>
+                <!--用户管理-->
+                <div class="card member-management">
+                    <a href="#member" data-toggle="collapse">
+                        <div class="card-header">
+                            <p class="dropdown-toggle">用户管理</p>
+                        </div>
+                    </a>
+                    <div class="collapse" id="member" data-parent="#management">
+                        <div class="member card-body">
+                            <a href="#">
+                                <div class="member-list">
+                                    <p>用户列表</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="member-add">
+                                    <p>添加用户</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--科研管理-->
+                <div class="card article-management">
+                    <a href="#article" data-toggle="collapse">
+                        <div class="card-header">
+                            <p class="dropdown-toggle">科研管理</p>
+                        </div>
+                    </a>
+                    <div class="collapse" id="article" data-parent="#management">
+                        <div class="card-body article">
+                            <a href="#">
+                                <div class="paper">
+                                    <p>期刊文章</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="con-paper">
+                                    <p>会议文章</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="patent">
+                                    <p>专利申请</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--内容管理-->
+                <div class="content-management">
+                    <h6>内容管理</h6>
+                    <!--首页推荐-->
+                    <div class="carousel-management card">
+                        <a href="#content" data-toggle="collapse">
+                            <div class="card-header">
+                                <p class="dropdown-toggle">主页内容</p>
+                            </div>
+                        </a>
+                        <div class="collapse" id="content" data-parent="#management">
+                            <div class="card-body content">
+                                <a href="#">
+                                    <div class="rec-article">
+                                        <p>推荐文章</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="rec-article">
+                                        <p>推荐新闻</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="rec-article">
+                                        <p>轮播图</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="推荐文章"></div>
+                    <div class="新闻推荐"></div>
+                </div>
+            </div>
+        </div>
+        <!--右侧主体-->
+        <div class="right-main-page col-md-9">
+            <!--上部提醒-->
+            <div class="title">
+                <ul>
+                    <li>请按照以下要求新增成员信息：</li>
+                    <li>带有 " * " 号的为必填项目！</li>
+                    <li>请按照输入框后要求添加信息！</li>
+                </ul>
+            </div>
+            <!--下部表单-->
+            <div class="form">
+                <!--专利名-->
+                <div class="row">
+                    <div class="caption col-2">
+                        <span>专利名:</span>
+                    </div>
+                    <!--每行内容-->
+                    <div class="content col-8">
+                        <textarea name="p_title" cols="40" rows="2" placeholder="* 请输入专利名" autofocus></textarea>
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2"></div>
+                </div>
+                <!--作者名-->
+                <div class="row">
+                    <div class="caption col-2">
+                        <span>作者:</span>
+                    </div>
+                    <div class="content col-8">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="member-list" id="member-list-id">
+                                <ul class="list-unstyled">
+                                    <li><span class="member-name" title="mid" >演示人员</span><a href="javascript:void(0)" onclick="addAuthor(this)" name="">Add</a></li>
+                                </ul>
+                                <span style="color:red"></span>
+                                <input type="text" name="unrecord-m" placeholder="Taibai-Li : 作者姓名格式" title="0"><a href="javascript:void(0)" onclick="addAuthor(this)" >添加其他作者</a>
+                            </div>
+                            </div>
+                            <!--所选作者列表-->
+                            <div class="col-12">
+                                <ul class="list-unstyled selected-member">
+                                    <li>
+                                        <!--<span class="order">1</span><span class="sele-member-name" title="mid">演示人员</span><a href="javascript:void(0)" onclick="delAuthor(this)">Del</a>-->
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 p-3"></div>
+                        </div>
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2"></div>
+                </div>
+                <!--申请日期-->
+                <div class="row">
+                    <!--每行标题-->
+                    <div class="caption col-2">
+                        <span>开始日期:</span>
+                    </div>
+                    <!--每行内容-->
+                    <div class="content col-8">
+                        <input type="text" name="apply_date" placeholder="* 请输入专利申请日期格式如：日/月/年" class="pub-date">
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2">* 日/月/年</div>
+                </div>
+                <!--授权日期-->
+                <div class="row">
+                    <!--每行标题-->
+                    <div class="caption col-2">
+                        <span>授权日期:</span>
+                    </div>
+                    <!--每行内容-->
+                    <div class="content col-8">
+                        <input type="text" name="get_date" placeholder="* 请输入专利授权日期格式如：日/月/年" class="pub-date">
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2">* 日/月/年</div>
+                </div>
+                <!--申请主体-->
+                <div class="row">
+                    <!--每行标题-->
+                    <div class="caption col-2">
+                        <span>申请主体:</span>
+                    </div>
+                    <!--每行内容-->
+                    <div class="content col-8">
+                        <input type="text" name="apply_department" placeholder="* 请输入申请主体" class="journal-name" value="SZU">
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2"></div>
+                </div>
+                <!--专利号-->
+                <div class="row">
+                    <!--每行标题-->
+                    <div class="caption col-2">
+                        <span>专利号:</span>
+                    </div>
+                    <!--每行内容-->
+                    <div class="content col-8">
+                        <input type="text" name="p_number" placeholder="* 请输入专利号" class="if-num">
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2"></div>
+                </div>
+                <!--专利类型-->
+                <div class="row">
+                    <!--每行标题-->
+                    <div class="caption col-2">
+                        <span>专利类型:</span>
+                    </div>
+                    <!--每行内容-->
+                    <div class="content col-8">
+                        <input type="text" name="p_type" placeholder="* 请输入专利文章类型如：国内发明专利" class="ar-url">
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2"></div>
+                </div>
+                <!--是否已经授权-->
+                <div class="row">
+                    <!--每行标题-->
+                    <div class="caption col-2">
+                        <span>是否已授权:</span>
+                    </div>
+                    <!--每行内容-->
+                    <div class="content col-8">
+                        <input type="radio" name="isAuthorized" class="isExh-1" id="isAuthorized-1" value="1" checked><label for="isAuthorized-1">是</label>
+                        <input type="radio" name="isAuthorized" class="isExh" id="isAuthorized-0" value="0"><label for="isAuthorized-0">否</label>
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2"></div>
+                </div>
+                <!--是否展示-->
+                <div class="row">
+                    <!--每行标题-->
+                    <div class="caption col-2">
+                        <span>是否展示:</span>
+                    </div>
+                    <!--每行内容-->
+                    <div class="content col-8">
+                        <input type="radio" name="isExh" class="isExh-1" id="isExh-1" value="1" checked><label for="isExh-1">是</label>
+                        <input type="radio" name="isExh" class="isExh" id="isExh-0" value="0"><label for="isExh-0">否</label>
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2"></div>
+                </div>
+                <!--提交按钮-->
+                <div class="row">
+                    <!--每行标题-->
+                    <div class="caption col-2">
+                        <span></span>
+                    </div>
+                    <!--每行内容-->
+                    <div class="content col-8 btn-act">
+                        <input type="button" name="submit" value="提交数据" onclick="addPatent()"><input type="button" name="clearDate" value="重置数据" onclick="clearInfo()">
+                    </div>
+                    <!--每行提示文字-->
+                    <div class="alert-word col-2"></div>
+                </div>
+            </div>
+    </div>
+    </div>
+</div>
+<script src="../js/common.js"></script>
+<script src="../js/admin.js"></script>
+<script>
+    document.onkeydown = function(e)
+    {
+        if(!e)
+        {
+            e = window.event;
+        }
+        if((e.keyCode || e.which) == 13)
+        {
+            addPatent();
+        }
+    }
+</script>
+</body>
+</html>

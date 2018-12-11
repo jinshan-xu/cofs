@@ -1,0 +1,116 @@
+#research-dir.container {
+  padding: 1rem 0;
+  text-align: justify; }
+
+#research-dir.container a {
+  color: #C10343; }
+
+#research-dir.container p {
+  margin-bottom: 0; }
+
+#research-dir.container #dir > .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 1rem 0;
+  padding: 2rem 1rem;
+  background-color: #badcef;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+#research-dir.container .nav-tabs {
+  border-bottom: 1px solid #C10343;
+  justify-content: center; }
+
+#research-dir.container .nav-tabs .nav-link {
+  color: #C10343;
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+#research-dir.container .nav-tabs .nav-link:hover {
+  border-color: #C10343 #C10343 #C10343;
+  color: #d4a337; }
+
+#research-dir.container .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #C10343;
+  border-color: #C10343 #C10343 #C10343; }
+
+#research-dir.container .content {
+  background-color: #e6ffff;
+  padding: .5rem;
+  margin: 1.5rem 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+#research-dir.container .content .title {
+  font-size: 1.5rem;
+  font-weight: 550;
+  border-bottom: 1px solid #d4a337;
+  border-left: 6px solid #C10343;
+  padding-bottom: .2rem;
+  padding-left: 1rem;
+  margin-bottom: .5rem;
+  margin-top: 2rem; }
+
+#research-dir.container .content .title a:hover {
+  text-decoration: none; }
+
+#research-dir.container .content .photo {
+  padding: .5rem 0; }
+
+#research-dir.container .content .photo img {
+  width: 100%; }
+
+#research-dir.container .content .intro ul {
+  list-style: none;
+  padding-left: 0; }
+
+#research-dir.container .content .intro li {
+  padding: .3rem 0; }
+
+#fundings.container {
+  padding: 1rem 0; }
+
+#fundings.container .fundings {
+  padding: 1rem 0; }
+
+#fundings.container .fundings .title {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  margin: 2rem 0;
+  padding: 0 .5rem; }
+
+#fundings.container .fundings .table {
+  overflow: auto; }
+
+#fundings.container .fundings table th {
+  text-align: center; }
+
+#fundings.container .fundings table tr:nth-child(2n) {
+  background-color: #e6ffff; }
+
+#fundings.container .fundings table td {
+  padding: .8rem .5rem;
+  text-align: left; }
+
+#fundings.container .fundings table td:nth-child(2) {
+  min-width: 8rem; }
+
+#fundings.container .fundings table td:last-child {
+  min-width: 4rem; }
+
+#fundings.container .fundings table td:first-child {
+  text-align: center; }
+
+@media (max-width: 576px) {
+  #research-dir.container .title {
+    font-size: 1rem;
+    font-weight: normal; }
+  #research-dir.container .reverse .row {
+    flex-direction: column-reverse; } }
+
+/*# sourceMappingURL=research-dir.css.map */

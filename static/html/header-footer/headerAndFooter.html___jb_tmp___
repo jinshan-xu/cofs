@@ -1,0 +1,124 @@
+<div>
+<header id="header" class="container-fluid">
+        <div class="top-nav-lg">
+            <div class="container clearfix">
+                <div class="links">
+                    <a href="../login/login.html">登&nbsp;&nbsp;录</a>
+                    <a href="http://www.szu.edu.cn/szu.asp">深大内部网</a>
+                    <a href="https://mail.szu.edu.cn/">教师邮箱</a>
+                    <a href="https://email.szu.edu.cn/">学生邮箱</a>
+                    <a href="http://www.lib.szu.edu.cn/">图书馆</a>
+                    <a href="javascript:void(0)">English</a>
+                </div>
+            </div>
+        </div>
+        <section class="container">
+            <nav class="navbar navbar-expand-md navbar-light navbar-self">
+                <!--中/大屏下logo与网站名-->
+                <div class="w-100">
+                    <!--顶部小导航条-->
+                    <a href="../index.html" class="navbar-brand media md-logo">
+                        <img src="../../images/index/logo-blue.png" alt="OFSC" class="">
+                        <div class="media-body align-self-center d-flex">
+                            <div class="left">
+                                <h3 class="name-cn">广东省光纤传感技术粤港联合研究中心</h3>
+                                <span class="name-en">Guangdong and Hong Kong Joint Research Centre for Optical Fibre Sensors</span>
+                            </div>
+                            <div class="szu-logo">
+                                <img src="../../images/index/szu-white.png" alt="SZU-LOGO">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!--小屏幕下logo-->
+                <a href="../index.html" class="navbar-brand">
+                    <img src="../../images/index/logo2-1.png" alt="" class="collapse sm-logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--收缩导航条-->
+                <div class="w-100">
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="navbar-nav navbar-nav-self">
+                            <li class="nav-item">
+                                <a href="../index.html" class="nav-link">主&nbsp;&nbsp;页</a>
+                            </li>
+                            <!--悬停下拉-->
+                            <li class="nav-item dropdown">
+                                <a href="../lab-intro/lab-intro.html" class="nav-link" >实验室概况</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="javascript:void(0)" class="nav-link dropdown-toggle">科学研究</a>
+                                <p class="dropdown-menu">
+                                    <a href="../research-dir/research-dir.html" class="nav-link dropdown-item">科研方向</a>
+                                    <a href="../fundings/fundings.html" class="nav-link dropdown-item">科研项目</a>
+                                    <a href="../instruments/instruments.html" class="nav-link dropdown-item">科研仪器</a>
+                                </p>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../achievement/achievement-list.html" class="nav-link">研究成果</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="javascript:void(0)" class="nav-link dropdown-toggle">团队成员</a>
+                                <p class="dropdown-menu">
+                                    <a href="../members/member-list.html#teacher" class="nav-link">研究生导师</a>
+                                    <a href="../members/member-list.html#postDoc" class="nav-link dropdown-item">在站博士后</a>
+                                    <a href="../members/member-list.html#doctor" class="nav-link dropdown-item">研究生</a>
+                                    <a href="../members/member-list.html#isGraduated" class="nav-link dropdown-item">杰出毕业生</a>
+                                </p>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="javascript:void(0)" class="nav-link dropdown-toggle">人才培养</a>
+                                <p class="dropdown-menu">
+                                    <a href="../awards/awards.html" class="nav-link dropdown-item">获奖情况</a>
+                                    <a href="../gallery/team-building.html" class="nav-link dropdown-item">拓展活动</a>
+                                </p>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="../news/news.html" class="nav-link">新闻动态</a>
+                            </li>
+                            <li class="nav-item"><a href="../recruit/recruit.html" class="nav-link">招生招聘</a></li>
+                            <li class="nav-item last-item">
+                                <a href="../login/login.html">登&nbsp;&nbsp;录</a>
+                                <a href="javascript:void(0)">中&nbsp;&nbsp;文</a>
+                                <a href="javascript:void(0)">English</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+<footer id="footer" class="container-fluid">
+        <!--宽度控制-->
+        <section class="container">
+            <!--三列-->
+            <div class="d-flex justify-content-between flex-wrap">
+                <div class="col-12 col-md-5 ofsc">
+                    <div class="d-flex">
+                        <div class="col-5 col-sm-5 col-lg-4 ofsc-logo">
+                            <img src="../../images/index/logo-blue.png" alt="">
+                        </div>
+                        <div class="ofsc-info col-7 col-sm-7 col-lg-8">
+                            <p><img src="../../images/index/phone.png"><span> 0755-26066281</span></p>
+                            <p><img src="../../images/index/email.png"><span> ypwang@szu.edu.cn</span></p>
+                            <p><img src="../../images/index/addr.png"> 深圳市深圳大学光电子所</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="szu-logo col-12 col-md-4">
+                    <a href="http://www.szu.edu.cn" target="_blank">
+                        <img src="../../images/index/szu-white.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <!--版权-->
+            <div class="copy-right">
+                <span>&copy;2018</span>
+                <span>版权所有</span>
+                <span>广东省光纤传感粤港联合研究中心</span>
+            </div>
+        </section>
+    </footer>
+</div>

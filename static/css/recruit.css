@@ -1,0 +1,44 @@
+#recruit.container .recruit {
+  margin: 2rem 0; }
+
+#recruit.container .recruit a {
+  color: #B40041; }
+
+#recruit.container .recruit .recruit-title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #C10343;
+  padding-bottom: 1rem;
+  font-weight: bold; }
+
+#recruit.container .recruit .title {
+  font-size: 1.5rem;
+  color: #C10343;
+  margin-top: 2rem;
+  margin-bottom: .2rem; }
+
+#recruit.container .recruit .title::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 0.4em solid #C10343;
+  border-bottom: none;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  position: relative;
+  top: .9em;
+  left: .1em; }
+
+#recruit.container .recruit p {
+  margin: .5rem 0; }
+
+#recruit.container .recruit .call-for-doc, #recruit.container .recruit .call-for-researcher {
+  border-bottom: 1px solid #c3732f; }
+
+#recruit.container .recruit .needed {
+  font-weight: bold; }
+
+#recruit.container .recruit .headline {
+  font-weight: bold; }
+
+/*# sourceMappingURL=recruit.css.map */

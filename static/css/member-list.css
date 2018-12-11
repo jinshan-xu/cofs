@@ -1,0 +1,167 @@
+@charset "UTF-8";
+#member-list.container {
+  /*------------- 水平导航 ----------------*/
+  /*------------- 人员列表 ----------------*/
+  /*------------- 垂直导航 ----------------*/ }
+
+#member-list.container .navbar-top {
+  padding: .5rem 0; }
+
+#member-list.container .nav-tabs {
+  border-bottom: 1px solid #C10343;
+  justify-content: center; }
+
+#member-list.container .nav-tabs .nav-link {
+  color: #C10343;
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+#member-list.container .nav-tabs .nav-link:hover {
+  border-color: #C10343 #C10343 #C10343;
+  color: #c3732f; }
+
+#member-list.container .nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #C10343;
+  border-color: #C10343 #C10343 #C10343; }
+
+#member-list.container .member-list {
+  padding: 0 12px;
+  /*为不同职位人员添加不同背景和竖线*/ }
+
+#member-list.container .member-list p.title {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 0 -.5rem;
+  font-weight: 600; }
+
+#member-list.container .member-list .item {
+  padding: 5px;
+  margin: .5rem 0; }
+
+#member-list.container .member-list .item .bg-color {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
+#member-list.container .member-list .item .photo {
+  padding: 1rem .3rem; }
+
+#member-list.container .member-list .item .photo img {
+  width: 92px;
+  height: 128px; }
+
+#member-list.container .member-list .item table {
+  margin: 1rem 0; }
+
+#member-list.container .member-list .item table tr:first-child {
+  font-size: 1rem;
+  color: #B40041; }
+
+#member-list.container .member-list .item table tr:first-child td {
+  padding-bottom: .3rem; }
+
+#member-list.container .member-list .item table td:first-child {
+  white-space: nowrap;
+  text-align: left;
+  font-weight: 550; }
+
+#member-list.container .member-list .item table td:last-child {
+  word-break: break-word; }
+
+#member-list.container .member-list .item table td {
+  padding: .2rem .1rem; }
+
+#member-list.container .member-list .item a {
+  color: #B40041; }
+
+#member-list.container .member-list .teacher .bg-color {
+  background-color: #e5f6ff; }
+
+#member-list.container .member-list .teacher .photo {
+  border-left: 3px solid #C10343; }
+
+#member-list.container .member-list .postDoc .bg-color {
+  background-color: #eefff8; }
+
+#member-list.container .member-list .postDoc .photo {
+  border-left: 3px solid #df9000; }
+
+#member-list.container .member-list .doctor .bg-color {
+  background-color: #edfcff; }
+
+#member-list.container .member-list .doctor .photo {
+  border-left: 3px solid #04a777; }
+
+#member-list.container .member-list .master .bg-color {
+  background-color: #ece7e8; }
+
+#member-list.container .member-list .master .photo {
+  border-left: 3px solid #9100da; }
+
+#member-list.container .ver-nav {
+  padding: 0 5px; }
+
+#member-list.container .ver-nav a:hover {
+  text-decoration: none; }
+
+#member-list.container .ver-nav a:hover li {
+  background-color: #C10343;
+  color: #fff; }
+
+#member-list.container .ver-nav a:last-child li {
+  border-bottom: none; }
+
+#member-list.container .ver-nav li {
+  font-size: 1.2rem;
+  color: #C10343;
+  padding: .5rem 1rem;
+  text-align: center;
+  margin: .5rem 0;
+  border-right: 1px solid #C10343;
+  position: relative; }
+
+#member-list.container .ver-nav .nav-style {
+  margin: 75px auto;
+  width: 120px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+#member-list.container .ver-nav .nav-style ul {
+  margin-bottom: 0; }
+
+#member-list.container .ver-nav .nav-fix {
+  position: fixed;
+  top: 0;
+  margin: 0; }
+
+#member-list.container .highlight li:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-right: 0.5rem solid #C10343;
+  border-left: 0.5rem solid #C10343;
+  border-top: 1.2rem solid #C10343;
+  border-bottom: .5rem solid transparent;
+  position: absolute;
+  left: 0;
+  top: .5rem; }
+
+/*----------------- 极小屏幕时 --------------------*/
+@media (max-width: 576px) {
+  #member-list.container .nav-tabs .nav-link {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .5rem .5rem; }
+  #member-list.container .member-list p.title {
+    font-size: 1.2rem;
+    font-weight: 550; }
+  #member-list.container .member-list .item .photo {
+    padding: 1rem .2rem; }
+  #member-list.container .member-list .item .photo img {
+    width: 64px;
+    height: 90px; } }
+
+@media (max-width: 992px) {
+  .nav-style {
+    display: none; } }
+
+/*# sourceMappingURL=member-list.css.map */

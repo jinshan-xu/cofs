@@ -1,0 +1,87 @@
+#login.container .main-form {
+  padding: 8rem 0;
+  flex-wrap: wrap; }
+
+#login.container .bg-set {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2rem 1rem 1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+#login.container .line {
+  margin: 2rem 0; }
+
+#login.container .line:last-child {
+  margin: 2rem 0; }
+
+#login.container .cancel {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #c21055;
+  color: #fff; }
+
+#login.container .confirm {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #ce9234;
+  color: #fff; }
+
+#login.container .row div {
+  padding: 0; }
+
+#login.container p {
+  line-height: 2.8rem;
+  margin-bottom: 0;
+  color: #000000;
+  font-size: 1.2rem; }
+
+#login.container p.small {
+  padding-left: 0.4em;
+  color: #555657;
+  font-size: .8rem; }
+
+#login.container input.pwd, #login.container input.name {
+  margin-bottom: .3rem .5rem; }
+
+#login.container input[type="button"] {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  color: #dfdce2; }
+
+#login.container input[type="button"]:hover {
+  color: #fff; }
+
+#login.container input {
+  padding: .5rem; }
+
+#login.container .tips p {
+  line-height: 1.5rem; }
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #login.container p.small {
+    padding-left: 25%; }
+  #login.container input.pwd, #login.container input.name {
+    margin-bottom: 0; }
+  #login.container .container {
+    padding: 0; }
+  #login.container .bg-set {
+    padding-right: 3rem; }
+  #login.container .line {
+    margin: .3rem 0; } }
+
+@media screen and (max-width: 576px) {
+  #login.container .line {
+    margin: 0; }
+  #login.container p.name, #login.container p.pwd {
+    text-align: left; }
+  #login.container input.name, #login.container input.pwd {
+    /*padding: 0;*/
+    margin-bottom: 0; }
+  #login.container p.small {
+    padding-left: 0; }
+  #login.container .container {
+    padding: 0; } }
+
+/*# sourceMappingURL=login.css.map */

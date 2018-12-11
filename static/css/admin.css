@@ -1,0 +1,290 @@
+@charset "UTF-8";
+.left-col {
+  padding: 1rem 0;
+  background-color: #2A3F54;
+  color: #eee; }
+
+.left-col p.title {
+  text-align: center;
+  font-size: 1.5rem; }
+
+.left-col .administrator {
+  padding: 1rem 0.8rem; }
+
+.left-col .administrator img {
+  margin-right: 1rem; }
+
+.left-col .administrator .welcome {
+  font-size: 1.2rem; }
+
+.left-col .card-display {
+  padding: 1rem 0; }
+
+.left-col .card-display h6 {
+  margin-top: 2rem;
+  padding-left: 0.5rem; }
+
+.left-col .card-display .card, .left-col .card-display .card-header, .left-col .card-display .card-body {
+  background-color: #2A3F54;
+  border-color: #3c4a63; }
+
+.left-col .card-display .card p, .left-col .card-display .card-header p, .left-col .card-display .card-body p {
+  margin-bottom: 0; }
+
+.left-col .card-display .card-header {
+  padding: 0.5rem; }
+
+.left-col .card-display .card-body {
+  padding: 0;
+  border-left: 2px solid #24a340; }
+
+.left-col .card-display .card-body p {
+  padding: 0.8rem 0 0.8rem 1rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid #3c4a63; }
+
+.left-col .card-display .card-body p:before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-right: 0.2rem;
+  border-top: 0.4em solid transparent;
+  border-left: 0.4em solid;
+  border-bottom: 0.4em solid transparent;
+  border-right: 0.4em solid transparent; }
+
+.left-col .card-display .card-body p:hover {
+  background-color: #41506a; }
+
+.left-col .card-display .card {
+  margin-top: 2px; }
+
+.left-col .card-display a {
+  text-decoration: none; }
+
+.left-col .card-display a:link {
+  color: #ddd; }
+
+.left-col .card-display a:visited {
+  color: #ddd; }
+
+.left-col .card-display a:hover {
+  color: #fff; }
+
+.left-col .card-display a:active {
+  color: #ddd; }
+
+.right-main-page > div > .list table {
+  width: 100%; }
+
+.right-main-page > div > .list table tr {
+  border-bottom: 1px solid #0F68B3; }
+
+.right-main-page > div > .list table tr:nth-child(2n) {
+  background-color: #e5f6ff; }
+
+.right-main-page > div > .list table td.title {
+  text-align: center;
+  font-weight: 550;
+  font-size: 1.1rem; }
+
+.right-main-page > div > .list table th {
+  text-align: center;
+  padding: .8rem 0 .3rem; }
+
+.right-main-page > div > .list table td {
+  padding: .8rem 0 .3rem;
+  text-align: center; }
+
+.right-main-page > div > .list table td:first-child {
+  width: 3rem;
+  text-align: center; }
+
+.right-main-page > div > .list table td:last-child {
+  width: 5rem;
+  font-size: 1rem; }
+
+.right-main-page > div > .list table td p {
+  margin: .3rem 0 .1rem;
+  padding: 0 .5rem;
+  font-size: 1rem;
+  color: #1b1e21; }
+
+.right-main-page > div > .list table td p mark {
+  background-color: #ffcc00; }
+
+.right-main-page > div > .list table td p a {
+  color: #C10343; }
+
+.right-main-page > div > .list table td p a:hover {
+  color: #f00; }
+
+.right-main-page > div > .list table td p:first-child a {
+  color: #0F68B3; }
+
+.right-main-page > div > .list table td p:nth-child(2) {
+  font-size: 1.2rem; }
+
+.right-main-page > div > .list table td p:nth-child(2) a:hover {
+  text-decoration: none; }
+
+.right-main-page .my-show {
+  display: block; }
+
+.right-main-page .my-hide {
+  display: none; }
+
+/********* admin 页码重写 *********/
+#admin.container .right-main-page {
+  padding-bottom: 3rem;
+  /****** 修改人员信息 *******/ }
+
+#admin.container .right-main-page #member_alter table, #admin.container .right-main-page #add_member table {
+  width: 100%; }
+
+#admin.container .right-main-page #member_alter table tr, #admin.container .right-main-page #add_member table tr {
+  margin: .5rem;
+  padding: .2rem; }
+
+#admin.container .right-main-page #member_alter table tr:nth-child(2n), #admin.container .right-main-page #add_member table tr:nth-child(2n) {
+  background-color: #caf3e9; }
+
+#admin.container .right-main-page #member_alter table td, #admin.container .right-main-page #add_member table td {
+  padding: .2rem; }
+
+#admin.container .right-main-page #member_alter table td:first-child, #admin.container .right-main-page #add_member table td:first-child {
+  text-align: right; }
+
+#admin.container .right-main-page #member_alter table td input[type='text'], #admin.container .right-main-page #add_member table td input[type='text'] {
+  padding: .3rem .5rem;
+  margin: .5rem;
+  width: 25rem; }
+
+#admin.container .right-main-page #member_alter table td input[type="button"], #admin.container .right-main-page #add_member table td input[type="button"] {
+  background-color: #C10343;
+  width: 25rem;
+  padding: .5rem;
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer; }
+
+#admin.container .right-main-page #member_alter table .forAlert td:first-child, #admin.container .right-main-page #add_member table .forAlert td:first-child {
+  color: red;
+  font-weight: 550; }
+
+#admin.container .right-main-page #member_alter table .forAlert li, #admin.container .right-main-page #add_member table .forAlert li {
+  margin: .5rem;
+  color: #4e555b; }
+
+#admin.container .right-main-page #article-list .addArticleBtton {
+  text-align: center; }
+
+#admin.container .right-main-page #article-list .addArticleBtton ul {
+  list-style: none; }
+
+#admin.container .right-main-page #article-list .addArticleBtton li {
+  display: inline-block;
+  cursor: pointer; }
+
+#admin.container .right-main-page #article-list .addArticleBtton button {
+  margin: .5rem 1rem;
+  line-height: 1.5rem;
+  padding: 0 .5rem .3rem;
+  cursor: pointer; }
+
+#admin.container .right-main-page #article-list .addArticleBtton span:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-right: .3rem;
+  color: #C10343; }
+
+#admin.container .right-main-page #article-list .addArticleBtton span:last-child {
+  font-weight: bold;
+  padding-left: .2rem; }
+
+#admin.container .right-main-page #article-list table td > p {
+  text-align: left; }
+
+#admin.container .right-main-page #article-list table td > p:last-child {
+  color: #C10343; }
+
+#admin.container .right-main-page #add-article .add-table table {
+  width: 100%; }
+
+#admin.container .right-main-page #add-article .add-table table td {
+  padding: 1rem .5rem; }
+
+#admin.container .right-main-page #add-article .add-table table td:first-child {
+  width: 8rem;
+  text-align: right; }
+
+#admin.container .right-main-page #add-article .add-table table textarea, #admin.container .right-main-page #add-article .add-table table input[type='text'] {
+  width: 100%;
+  padding: .5rem; }
+
+#admin.container .right-main-page #add-article .add-table table .member-list, #admin.container .right-main-page #add-article .add-table table .selected-member {
+  border: 1px solid #aaa;
+  border-radius: 3px; }
+
+#admin.container .right-main-page #add-article .add-table table .member-list li, #admin.container .right-main-page #add-article .add-table table .selected-member li {
+  display: inline-block; }
+
+#admin.container .right-main-page #add-article .add-table table ul {
+  list-style: none;
+  padding: 0; }
+
+#admin.container .right-main-page #add-article .add-table table li {
+  padding: .5rem .3rem; }
+
+#admin.container .right-main-page #add-article .add-table table span {
+  display: inline-block;
+  border: 1px solid #d32d00;
+  text-align: center;
+  padding: .3rem .4rem; }
+
+#admin.container .right-main-page #add-article .add-table table span:first-child {
+  padding: .3rem .5rem;
+  min-width: 4rem; }
+
+#admin.container .right-main-page #add-article .add-table table span:last-child {
+  background-color: #d32d00;
+  color: #fff;
+  padding: .3rem .2rem;
+  cursor: pointer; }
+
+#admin.container .right-main-page #add-article .add-table table span.isUseEn {
+  cursor: pointer; }
+
+#admin.container .right-main-page #add-article .add-table table span.selected {
+  background-color: #0F68B3;
+  border: 1px solid #0F68B3; }
+
+#admin.container .right-main-page #add-article .add-table table .add-other-person {
+  padding: .5rem .2rem; }
+
+#admin.container .right-main-page #add-article .add-table table .add-other-person input {
+  width: 20rem; }
+
+#admin.container .right-main-page #add-article .add-table table .add-other-person span {
+  padding: .5rem .4rem; }
+
+#admin.container .right-main-page #add-article .add-table mark {
+  background-color: #ffe600; }
+
+#admin.container .right-main-page #add-article .add-table input[type="button"] {
+  background-color: #C10343;
+  color: #eee;
+  padding: .5rem 0;
+  width: 15rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 3px; }
+
+#admin.container .right-main-page #add-article .add-table input[type="button"]:hover {
+  color: #fff; }
+
+/*# sourceMappingURL=admin.css.map */

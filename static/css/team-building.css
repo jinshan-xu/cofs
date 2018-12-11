@@ -1,0 +1,33 @@
+#team-building.container .team-buiding {
+  margin: 2rem 0; }
+
+#team-building.container .team-buiding p {
+  margin: 0; }
+
+#team-building.container .team-buiding .intro {
+  padding: 1rem .5rem;
+  background-color: #bde1ef;
+  margin: 1rem 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+#team-building.container .team-buiding img {
+  width: 100%; }
+
+#team-building.container .team-buiding .carousel-caption {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 50px;
+  font-size: 1.5rem;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+@media (max-width: 576px) {
+  #team-building.container .team-buiding .carousel-caption {
+    bottom: 20px;
+    font-size: 1rem;
+    padding: .5rem; } }
+
+/*# sourceMappingURL=team-building.css.map */

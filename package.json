@@ -1,0 +1,27 @@
+{
+  "name": "ofsc",
+  "version": "1.0.0",
+  "description": "this is for ofsc homePage",
+  "main": "main.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ./test.js",
+    "start": "node ./main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com"
+  },
+  "keywords": [
+    "ofsc"
+  ],
+  "author": "xjs",
+  "license": "ISC"
+}

@@ -1,0 +1,160 @@
+@charset "UTF-8";
+html, body {
+  font-family: "微软雅黑", "Arial","Tahoma","Helvetica","STHeiti","Hiragino Sans GB","宋体","Microsoft Yahei",sans-serif; }
+
+#header.container-fluid {
+  background: #9f023a url(../images/index/hbg-red.jpg) repeat;
+  border-bottom: 0.3rem solid #e29d39; }
+
+#header.container-fluid img {
+  max-width: 6rem;
+  height: auto;
+  margin: 0.2rem 0.5rem 0.2rem 0; }
+
+#header.container-fluid .top-nav-lg {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 -15px .5rem; }
+
+#header.container-fluid .top-nav-lg .container {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+#header.container-fluid .top-nav-lg .container div {
+  margin: 0; }
+
+#header.container-fluid .top-nav-lg .links {
+  float: right;
+  padding: .2rem 0;
+  font-size: 0; }
+
+#header.container-fluid .top-nav-lg .links a {
+  color: #ddd;
+  font-size: .8rem; }
+
+#header.container-fluid .top-nav-lg .links a:after {
+  content: '|';
+  margin: 0 .8rem; }
+
+#header.container-fluid .top-nav-lg .links a:last-child:after {
+  content: '';
+  margin: 0; }
+
+#header.container-fluid .container {
+  padding: 0; }
+
+#header.container-fluid .navbar-brand {
+  margin: 0; }
+
+#header.container-fluid .navbar-self {
+  flex-wrap: wrap;
+  padding: 0.5rem 0 0; }
+
+#header.container-fluid .dropdown:hover .dropdown-menu {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 2.6rem;
+  padding: 0; }
+
+#header.container-fluid .dropdown:hover .dropdown-menu a {
+  text-align: left;
+  padding: .5rem 0 .5rem 1.8rem;
+  border-bottom: 1px solid #080808; }
+
+#header.container-fluid .dropdown:hover .dropdown-menu a:hover {
+  background-color: rgba(179, 0, 65, 0.9); }
+
+#header.container-fluid .media-body {
+  justify-content: space-between;
+  flex-wrap: nowrap; }
+
+#header.container-fluid .media-body .left {
+  width: 70%; }
+
+#header.container-fluid .media-body .szu-logo {
+  width: 30%;
+  text-align: right;
+  align-self: center; }
+
+#header.container-fluid .media-body .szu-logo > img {
+  max-width: 12rem; }
+
+#header.container-fluid .name-cn {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #fff; }
+
+#header.container-fluid .name-cn, #header.container-fluid .name-en {
+  padding-left: .5rem; }
+
+#header.container-fluid .name-en {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #eee; }
+
+#header.container-fluid .navbar-nav-self {
+  width: 100%;
+  justify-content: space-between; }
+
+#header.container-fluid .navbar-nav-self .nav-item:first-child a {
+  padding-left: 0; }
+
+#header.container-fluid .navbar-nav-self .nav-item:last-child a {
+  padding-right: 0; }
+
+#header.container-fluid .navbar-nav .nav-link {
+  padding: 1rem 0.4rem .4rem;
+  font-size: 1.2rem;
+  text-align: center; }
+
+#header.container-fluid .navbar-nav .nav-link:link {
+  color: #ebbc51; }
+
+#header.container-fluid .navbar-nav .nav-link:visited {
+  color: #ebbc51; }
+
+#header.container-fluid .navbar-nav .nav-link:hover {
+  color: #ffe04b; }
+
+#header.container-fluid .navbar-nav .nav-link:active {
+  color: #ffe04b; }
+
+#header.container-fluid .last-item {
+  display: none; }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #header.container-fluid .name-cn {
+    font-size: 1.5rem; }
+  #header.container-fluid .name-en {
+    font-size: 0.8rem;
+    font-weight: 400; } }
+
+@media (max-width: 767px) {
+  .top-nav-lg {
+    display: none; }
+  #header.container-fluid .navbar-self {
+    padding-bottom: .5rem; }
+  #header.container-fluid .navbar-self .md-logo {
+    display: none; }
+  #header.container-fluid .navbar-self .navbar-brand img.sm-logo {
+    display: inline-block;
+    max-width: 16rem;
+    margin: 0.2rem 0; }
+  #header.container-fluid .navbar-self .navbar-nav .nav-link {
+    border-bottom: 1px solid #780206; }
+  #header.container-fluid .last-item {
+    display: list-item;
+    text-align: center;
+    font-size: 0;
+    padding: 1rem 0 .5rem; }
+  #header.container-fluid .last-item a {
+    font-size: 1rem;
+    color: #ebbc51; }
+  #header.container-fluid .last-item a:after {
+    content: '|';
+    margin: 0 1rem; }
+  #header.container-fluid .last-item a:last-child:after {
+    content: '';
+    margin: 0; } }
+
+/*# sourceMappingURL=header.css.map */

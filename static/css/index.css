@@ -1,0 +1,209 @@
+@charset "UTF-8";
+header.container-fluid .container {
+  padding: 0; }
+
+#index.container {
+  /*----------------- 轮播+右侧图文 -------------------*/
+  /*------------------------  首页文章图片 --------------------*/
+  /*------------------------  首页新闻及友情链接 --------------------*/ }
+
+#index.container .info-show .carousel-inner img {
+  width: 100%; }
+
+#index.container .info-show .img-list {
+  padding: .5rem 2px .5rem 0; }
+
+#index.container .info-show .img-list img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+#index.container .info-show .intro {
+  padding: .5rem 5px .5rem 3px; }
+
+#index.container .info-show .intro .inner {
+  border: 1px solid #cd0d2c;
+  height: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+#index.container .info-show .intro img {
+  width: 100%; }
+
+#index.container .info-show .intro .intro-info {
+  padding: 0; }
+
+#index.container .info-show .intro p.intro-word {
+  margin: 0;
+  padding: .5rem;
+  text-align: justify; }
+
+#index.container .info-show .intro p.intro-word span {
+  font-size: .9rem;
+  color: #6c757d; }
+
+#index.container .info-show .intro p.intro-word span:first-child {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c3732f; }
+
+#index.container .info-show .intro p.intro-word a {
+  float: right;
+  padding: 0 3px;
+  color: #0F68B3;
+  font-size: .8rem;
+  font-style: italic; }
+
+#index.container .recommend .rec-article {
+  border: 1px solid #cd0d2c;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-bottom: 1rem; }
+
+#index.container .recommend .rec-article .title {
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: #fff;
+  background-color: #cd0d2c;
+  text-align: center;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  padding: .5rem 0; }
+
+#index.container .recommend .rec-article .inner-img {
+  padding: 1px 1px; }
+
+#index.container .recommend .rec-article .inner-img .inner-img-temp {
+  margin: 3px;
+  padding: .5rem;
+  background-color: #dce8ee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+#index.container .recommend .rec-article .inner-img .inner-img-temp img {
+  transition: all .5s linear; }
+
+#index.container .recommend .rec-article .inner-img .inner-img-temp a:hover img {
+  transform: scale(1.03); }
+
+#index.container .recommend .rec-article .inner-img a {
+  color: #000;
+  text-decoration: none; }
+
+#index.container .recommend .rec-article .inner-img a:hover {
+  color: #000; }
+
+#index.container .recommend .rec-article .inner-img a:visited {
+  color: #000; }
+
+#index.container .recommend .rec-article .inner-img img {
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+#index.container .recommend .rec-article .inner-img p {
+  margin: 0;
+  text-align: center; }
+
+#index.container .recommend .rec-article .inner-img p.ar-intro {
+  padding: .8rem 0 .2rem;
+  color: #cd0d2c;
+  font-size: 1rem; }
+
+#index.container .recommend .rec-article .inner-img p.ar-title {
+  padding: .2rem 0 .5rem;
+  font-size: .8rem; }
+
+#index.container .recommend .rec-article .more-article {
+  text-align: center;
+  font-size: 1.2rem;
+  border-top: 1px solid #cd0d2c;
+  padding: 1rem; }
+
+#index.container .recommend .rec-article .more-article a {
+  color: #0F68B3; }
+
+#index.container .recommend > .news-link {
+  padding: 0 5px; }
+
+#index.container .recommend > .news-link .temp {
+  margin: 0;
+  border: 1px solid #cd0d2c;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  margin-bottom: 1rem; }
+
+#index.container .recommend > .news-link .title {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: .5rem 0;
+  background-color: #cd0d2c;
+  border-bottom: 1px solid #cd0d2c;
+  color: #fff;
+  font-weight: 550; }
+
+#index.container .recommend > .news-link .rec-news, #index.container .recommend > .news-link .rec-link {
+  padding: 0 5px; }
+
+#index.container .recommend > .news-link .rec-news .news-item, #index.container .recommend > .news-link .rec-link .news-item {
+  margin: 0 -5px;
+  border-bottom: 1px solid #a9bcbf;
+  padding: .75rem .5rem .2rem; }
+
+#index.container .recommend > .news-link .rec-news .news-item:last-child, #index.container .recommend > .news-link .rec-link .news-item:last-child {
+  border: none;
+  text-align: center;
+  padding: .8rem 0 0; }
+
+#index.container .recommend > .news-link .rec-news .news-item a:hover span.detail, #index.container .recommend > .news-link .rec-link .news-item a:hover span.detail {
+  color: #0F68B3; }
+
+#index.container .recommend > .news-link .rec-news .news-item a, #index.container .recommend > .news-link .rec-link .news-item a {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem; }
+
+#index.container .recommend > .news-link .rec-news .news-item a:hover, #index.container .recommend > .news-link .rec-link .news-item a:hover {
+  text-decoration: none; }
+
+#index.container .recommend > .news-link .rec-news .news-item span.time, #index.container .recommend > .news-link .rec-link .news-item span.time {
+  color: #0F68B3;
+  padding-right: .3rem; }
+
+#index.container .recommend > .news-link .rec-news .news-item span.detail, #index.container .recommend > .news-link .rec-link .news-item span.detail {
+  color: #c3732f; }
+
+#index.container .recommend > .news-link .rec-news .news-item span.more, #index.container .recommend > .news-link .rec-link .news-item span.more {
+  font-size: 1rem; }
+
+#index.container .recommend > .news-link .rec-news .news-item span.more:hover, #index.container .recommend > .news-link .rec-link .news-item span.more:hover {
+  text-decoration: underline; }
+
+#index.container .recommend > .news-link .rec-news .new:after, #index.container .recommend > .news-link .rec-link .new:after {
+  content: 'new';
+  color: red;
+  font-size: .8em;
+  position: relative;
+  top: -.5em; }
+
+#index.container .recommend > .news-link .rec-link li.news-item span.detail {
+  text-align: left;
+  color: #0F68B3; }
+
+#index.container .recommend > .news-link .rec-link li.news-item:last-child {
+  padding-left: .5rem;
+  text-align: left; }
+
+#index.container .recommend > .news-link .rec-link li.news-item a:hover span.detail {
+  color: #0F68B3; }
+
+@media (max-width: 768px) {
+  #index.container .info-show .img-list, #index.container .info-show .intro {
+    padding: .5rem 4px 1rem; }
+  #index.container .recommend > .news-link {
+    padding: 0; } }
+
+/*# sourceMappingURL=index.css.map */

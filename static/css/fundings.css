@@ -1,0 +1,36 @@
+#fundings.container {
+  padding: 0 5px; }
+
+#fundings.container .fundings {
+  padding: 1rem 0; }
+
+#fundings.container .fundings .title {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: bold;
+  margin: 2rem 0;
+  padding: 0 .5rem; }
+
+#fundings.container .fundings .table {
+  overflow: auto; }
+
+#fundings.container .fundings table th {
+  text-align: center; }
+
+#fundings.container .fundings table tr:nth-child(2n) {
+  background-color: #e6ffff; }
+
+#fundings.container .fundings table td {
+  padding: .8rem .5rem;
+  text-align: left; }
+
+#fundings.container .fundings table td:nth-child(2) {
+  min-width: 8rem; }
+
+#fundings.container .fundings table td:last-child {
+  min-width: 4rem; }
+
+#fundings.container .fundings table td:first-child {
+  text-align: center; }
+
+/*# sourceMappingURL=fundings.css.map */
